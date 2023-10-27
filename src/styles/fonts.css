@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Das-Gitter-Mac";
+  src: url("/fonts/Das-Gitter-Mac.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "molgen";
+  src: url("/fonts/molgen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brightania";
+  src: url("/fonts/Brightania.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.font-1,
+.font-1 *{
+  font-family:"Das-Gitter-Mac" !important;
+}
+
+.font-2,
+.font-2 *{
+  font-family: "molgen" !important;
+}
+
+.font-3,
+.font-3 *{
+  font-family:"Brightania" !important;
+}
