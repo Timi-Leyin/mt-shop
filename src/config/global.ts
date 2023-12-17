@@ -9,7 +9,7 @@ const manager = new THREE.LoadingManager();
 
 // scene
 const scene = new THREE.Scene();
-scene.fog = new THREE.Fog(colors[random(colors.length)], 0.1, 200 );
+// scene.fog = new THREE.Fog(colors[random(colors.length)], 0.1, 200 );
 
 // cameraa
 const camera = new THREE.PerspectiveCamera(
@@ -46,7 +46,7 @@ const lightFolder = gui.addFolder("Lighting");
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
 
-const directionalLight = new THREE.DirectionalLight( 0xffffee, 3);
+const directionalLight = new THREE.DirectionalLight( 0xffffee, 30);
 
 lightFolder.add(directionalLight.position,"x").max(100).min(-100)
 lightFolder.add(directionalLight.position,"y").max(100).min(-100)
@@ -69,7 +69,7 @@ scene.add( directionalLight );
 //   controls
 const controls = new OrbitControls( camera, renderer.domElement );
 controls.enableDamping = true;
-// controls.autoRotate = true
+controls.autoRotate = true
 
 
   function animate(fun?:any) {
