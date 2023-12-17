@@ -13,7 +13,7 @@ const MainCanvas = () => {
   useEffect(() => {
     animate();
     const group = new THREE.Group();
-    LoadModel("models/bleu_de_chanel_perfume.glb", (_, data, loader) => {
+    LoadModel("models/model-4.glb", (_, data, loader) => {
       setLoaded(loader);
       console.log(loader);
       if (typeof data != "undefined") {
