@@ -1,11 +1,11 @@
 import { CloseCircle, ShoppingBag } from "iconsax-react";
 
-const Cart = ({isOpen=false}:{isOpen?:boolean}) => {
+const Cart = ({isOpen=false, onClose}:{isOpen?:boolean, onClose:any}) => {
   if(isOpen){
     return(
       <div className="fixed flex bg-black z-[20] justify-end items-end bg-opacity-60 backdrop-blur-md top-0 left-0 w-screen h-screen">
       <div className="bg-white relative w-[400px] p-7 rounded-md shadow h-[95vh] my-5 mx-10">
-        <div className="close cursor-pointer scale-75 absolute top-[-15px] left-[-25px] bg-white rounded-full p-3">
+        <div onClick={onClose} className="close cursor-pointer scale-75 absolute top-[-15px] left-[-25px] bg-white rounded-full p-3">
           <CloseCircle size={30} />
         </div>
         <h3 className="text-4xl flex items-center justify-between">Shopping Bag <div className="relative">
