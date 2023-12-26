@@ -15,9 +15,10 @@ const LoadModel = (path:string, cb:Callback) => {
     function (object) {
       object.scene.receiveShadow = true;
       object.scene.castShadow = true;
-      object.scene.position.y = -200;
+      // object.scene.position.y = -500;
       // object.scene.position.y = -100;
-       object.scene.scale.set(15,15,15)
+      const scale = .2;
+       object.scene.scale.set(scale, scale,scale)
       // object.scene.scale.set(0.2, 0.2, 0.2);
       model = object.scene;
       console.log(model)

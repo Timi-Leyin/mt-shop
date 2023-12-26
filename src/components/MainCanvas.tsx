@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import LoadModel from "./LoadModel";
 import { animate, camera, scene } from "../config/global";
-import gsap from "gsap";
+// import gsap from "gsap";
 import * as THREE from "three"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { globalTl } from "../config/timeline";
 
 const MainCanvas = () => {
@@ -13,13 +13,13 @@ const MainCanvas = () => {
   useEffect(() => {
     animate();
     const group = new THREE.Group();
-    LoadModel("models/model-4.glb", (_, data, loader) => {
+    LoadModel("models/model.glb", (_, data, loader) => {
       setLoaded(loader);
       console.log(loader);
       if (typeof data != "undefined") {
-       data.rotation.y =Math.PI / 2
-       data.position.y=-20;
-       data.rotation.x=0.5;
+      //  data.rotation.y =Math.PI / 2
+       data.position.y=-200;
+      //  data.rotation.x=0.5;
         group.add(data);
         // const tl = gsap.timeline();
         // tl.to(group.rotation, {
@@ -34,7 +34,7 @@ const MainCanvas = () => {
           duration:100,
           ease:"back.in",
           scrollTrigger: {
-            trigger: ".hero",
+            trigger: "html body",
             start: "top center",
             // markers:true,
             end: "bottom center",

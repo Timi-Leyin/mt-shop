@@ -3,21 +3,21 @@ import SplitType from "split-type";
 import Emblem from "./Emblem";
 import { Message } from "iconsax-react";
 import gsap from "gsap";
-import MainCanvas from "./MainCanvas";
+// import MainCanvas from "./MainCanvas";
 
 // <Spline scene="https://prod.spline.design/PVH8bu1tPAFf2a21/scene.splinecode" />
 
 const Hero = () => {
   const headingText = useRef(null!);
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   useEffect(() => {
     const text = new SplitType(headingText.current, {
       types: "words,chars,lines",
     });
 
     if (text.lines) {
-      text.lines[2].style.position = "relative";
-      text.lines[2].style.zIndex = "10";
+      // text.lines[2].style.position = "relative";
+      // text.lines[2].style.zIndex = "10";
     }
 
     if(text.chars){
@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="text-center mt-12 ">
         <h1
           ref={headingText}
-          className="text-8xl pt-10 mt-12 font-2 mx-auto max-w-[950px]"
+          className="text-7xl pt-10 mt-12 font-2 mx-auto max-w-[900px]"
         >
           Indulge in Luxurious Aromas: Your Perfume Paradise Awaits!
         </h1>

@@ -39,8 +39,8 @@ canvas{
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* filter:brightness(0.4); */
-  /* pointer-events: none; */
+  filter:brightness(0.4);
+  pointer-events: none;
   background: transparent !important;
   z-index: 8;
 }
@@ -78,7 +78,9 @@ body::before {
 }
 
 .logo{
-  filter: invert(1);
+  /* filter: invert(1); */
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ border-radius: 100px;
   transform: scale(2.6);
 }
 

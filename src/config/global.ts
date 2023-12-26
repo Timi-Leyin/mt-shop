@@ -1,8 +1,8 @@
 import { GUI } from "dat.gui";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import random from "../utils/random";
-import { colors } from "./theme";
+// import random from "../utils/random";
+// import { colors } from "./theme";
 
 
 const manager = new THREE.LoadingManager();
@@ -72,7 +72,7 @@ controls.enableDamping = true;
 controls.autoRotate = true
 
 
-  function animate(fun?:any) {
+  function animate() {
     if (controls.autoRotate) {
       controls.update();
     }
