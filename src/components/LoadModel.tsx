@@ -2,7 +2,7 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { manager } from "../config/global";
 
-type Callback = (error:any, data:any, loader:string)=> void
+type Callback = (error:unknown, data:unknown, loader:string)=> void
 
 const LoadModel = (path:string, cb:Callback) => {
   const loader = new GLTFLoader(manager);
