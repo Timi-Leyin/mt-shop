@@ -17,8 +17,8 @@ const Header = () => {
   const [openCart, setOpenCart] = useState(false)
 
   return (
-    <><header className="flex absolute z-[9] w-full py-2 text-white top-0 left-0 px-10 justify-between">
-      <ul className="hidden gap-4 w-3/4 md:flex  border-b-[1px] border-gray-200 items-center">
+    <><header className="flex absolute z-[9] w-full py-2 text-white top-0 left-0 px-10 justify-between items-center">
+      <ul className="hidden gap-4 w-3/4 md:flex mt-2  border-b-[1px] border-gray-200 items-center">
         <li className="">
           <Link to="/">Home</Link>
         </li>
@@ -36,16 +36,18 @@ const Header = () => {
         </li>
       </ul>
 
-      <div className="w-3/4  border-b-[1px] border-gray-200  md:hidden hamburger">
-        <HambergerMenu />
+      <div className="w-3/4  border-b-[1px] mt-2 border-gray-200 md:hidden hamburger">
+     <div className="py-2">
+     <HambergerMenu />
+     </div>
       </div>
 
       <div className="logo m-3 my-5 mx-10">
         <img src="/assets/logo-circle.png" className="" width={60} alt="" />
       </div>
 
-      <ul className="flex w-3/4 justify-end gap-4 items-center border-b-[1px] border-gray-200">
-        <li className="">
+      <ul className="flex w-3/4 justify-end gap-4 items-center border-b-[1px]  border-gray-200">
+        <li className="py-3">
           <Link to="/">
             <Instagram size={SIZE} variant={variant} />
           </Link>

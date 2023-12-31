@@ -2,19 +2,20 @@ import { Facebook, Instagram, Whatsapp } from "iconsax-react";
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import EventsBanner from "../components/EventsBanner";
+// import EventsBanner from "../components/EventsBanner";
+import Cta from "../components/Cta";
 
 const Contact = () => {
-  const [variant, setVar] = useState<any>("Bulk")
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [variant] = useState<any>("Bulk")
   return (
     <main>
       <Header />
-      <div className="h-[60vh] flex justify-around mb-5 mx-auto items-center nooise-gradient">
+      <div className="md:h-[60vh] py-12 md:flex justify-around mb-5 mx-auto items-center nooise-gradient">
         <div className="p-12">
           <h1 className="text-5xl font-bold font-2">Contact Us</h1>
           <p className="max-w-[400px] my-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            incidunt totam accusamus accusantium.
+          Whether you're a seasoned fragrance enthusiast or just beginning your olfactory exploration, Mercy Touch is here for you
           </p>
           <div className="flex gap-2">
             <a href="">
@@ -31,13 +32,13 @@ const Contact = () => {
         </div>
 
         <div className="">
-          Lorem ipsum dolor sit.
+         <img src="/assets/about.png" className="hidden lg:block" width={300} alt="" />
         </div>
       </div>
-      <div className="max-w-[600px] mb-10 m-auto">
+      <div className="max-w-[600px] p-12 mb-10 m-auto">
         <form action="" className="">
 
-        <div className="flex gap-5 relative w-full items-center">
+        <div className="flex md:flex-row flex-col gap-5 relative w-full items-center">
         <div className="flex w-full flex-col">
             <label htmlFor="">Name</label>
             <input
@@ -47,7 +48,7 @@ const Contact = () => {
               className="p-5 w-full border border-[#ddd] rounded-xl"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex w-full flex-col">
             <label htmlFor="">Email</label>
             <input
               type="email"
@@ -75,7 +76,8 @@ const Contact = () => {
         <button className="px-4 bg-[#B16B6C] font-bold w-full py-5 m-4 h-[60px] text-white text-xl rounded-lg">submit</button>
         </form>
       </div>
-      <EventsBanner />
+      {/* <EventsBanner /> */}
+      <Cta />
       <Footer />
     </main>
   );

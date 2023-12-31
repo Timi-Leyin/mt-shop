@@ -1,4 +1,4 @@
-import { GUI } from "dat.gui";
+// import { GUI } from "dat.gui";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import random from "../utils/random";
@@ -22,7 +22,7 @@ const camera = new THREE.PerspectiveCamera(
 
 
 // gui
-const gui = new GUI()
+// const gui = new GUI()
 
 
 // renderer
@@ -41,16 +41,16 @@ const renderer = new THREE.WebGLRenderer({
 // lights
 
 
-const lightFolder = gui.addFolder("Lighting");
+// const lightFolder = gui.addFolder("Lighting");
 
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
 
 const directionalLight = new THREE.DirectionalLight( 0xffffee, 30);
 
-lightFolder.add(directionalLight.position,"x").max(100).min(-100)
-lightFolder.add(directionalLight.position,"y").max(100).min(-100)
-lightFolder.add(directionalLight.position,"z").max(100).min(-100)
+// lightFolder.add(directionalLight.position,"x").max(100).min(-100)
+// lightFolder.add(directionalLight.position,"y").max(100).min(-100)
+// lightFolder.add(directionalLight.position,"z").max(100).min(-100)
 
 
 directionalLight.position.x = -4;
@@ -58,8 +58,8 @@ directionalLight.position.y = 13.4;
 directionalLight.position.z = 22.2;
 directionalLight.castShadow = true
 
-const dl = new THREE.DirectionalLightHelper(directionalLight)
-scene.add(dl)
+// const dl = new THREE.DirectionalLightHelper(directionalLight)
+// scene.add(dl)
 scene.add( directionalLight );
 
 
@@ -82,4 +82,4 @@ controls.autoRotate = true
     // fun && fun();
   }
 
-export {manager,scene,camera, gui, renderer,animate,controls}
+export {manager,scene,camera, renderer,animate,controls}

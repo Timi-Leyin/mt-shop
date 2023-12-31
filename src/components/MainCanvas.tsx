@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import LoadModel from "./LoadModel";
 import { animate, camera, scene } from "../config/global";
@@ -7,13 +8,13 @@ import * as THREE from "three"
 import { globalTl } from "../config/timeline";
 
 const MainCanvas = () => {
-  const [loaded, setLoaded] = useState("")
+  const [, setLoaded] = useState("")
   console.log(camera.position)
   console.log(camera.rotation)
   useEffect(() => {
     animate();
     const group = new THREE.Group();
-    LoadModel("models/model.glb", (_, data, loader) => {
+    LoadModel("models/model.glb", (_, data:any, loader) => {
       setLoaded(loader);
       console.log(loader);
       if (typeof data != "undefined") {
@@ -54,7 +55,7 @@ const MainCanvas = () => {
   }, []);
   return (
     <div className="qw">
-      {loaded}
+      {/* {loaded} */}
     </div>
   );
 };

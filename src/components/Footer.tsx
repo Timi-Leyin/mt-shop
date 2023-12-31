@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12">
-          <h3 className="my-5 text-4xl">Subscribe to my Newsletter</h3>
+          <h3 className="my-5 text-2xl md:text-4xl">Subscribe to my Newsletter</h3>
           <div className="">
             <Newsletter />
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
 
 
       <p className="mt-7 text-sm ">
-        2023 Copyright | All Right Reserved - <b>Designed by @OriginalTimi</b>
+        2023 Copyright | All Right Reserved - <b>Designed by <a href="https://github.com/timi-leyin">@OriginalTimi</a></b>
       </p>
     </footer>
   );

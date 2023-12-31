@@ -139,6 +139,8 @@ body::before {
     /* height: 100vh; */
   }
 
+  
+
   canvas{
     /* filter: blur(10px); */
   }
